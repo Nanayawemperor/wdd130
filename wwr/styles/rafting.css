@@ -1,6 +1,5 @@
 :root {
     --primary-color: #055a05;
-    --secondary-color: #f46161;
     --accent1-color: rgb(81, 100, 243);
     --accent2-color: black;
     --heading-font: "Times New Roman", "Georgia", serif;
@@ -83,10 +82,11 @@ h1 {
 
 .hero article {
     opacity: 0.9;
-    color: white;
+    color: black;
     position: absolute;
-    top: 380px;
+    top: 360px;
     padding-top: 5px;
+    background-color: white;
 }
 
 .hero article img {
