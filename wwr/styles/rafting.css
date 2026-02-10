@@ -21,14 +21,19 @@ header {
 body {
     font-family: var(--body-font);
     color: black;
-    margin: 10px;
+    margin: 0;
 }
 
 header,
 main,
 footer {
-    width: 840px;
+    width: 100%;
     margin: 0 auto;
+}
+
+html,
+body {
+    overflow-x: hidden;
 }
 
 h1,
@@ -80,13 +85,19 @@ section h2 {
 
 h1 {
     position: absolute;
-    top: 20px;
+    top: 120px;
     width: 100%;
-    padding: 16px;
+    padding: 10px;
     text-align: center;
     opacity: 0.75;
     background-color: var(--accent1-color);
     color: white;
+}
+
+.adventure-grid {
+    max-width: 840px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .hero article {
@@ -152,6 +163,115 @@ header img {
 
 }
 
-figcaption {
-    margin-left: 30px;
+/* Header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6d9ff;
+    padding: 1rem;
+}
+
+.site-header img {
+    width: 90px;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+/* Company Info */
+.company-info {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* Contact Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.map img {
+    width: 100%;
+}
+
+/* Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.5rem;
+}
+
+fieldset {
+    border: none;
+}
+
+button {
+    padding: 0.7rem;
+    background-color: #ccc;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+
+/* Employees */
+.employees {
+    text-align: center;
+}
+
+.employee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-content: space-around;
+}
+
+.employee-grid img {
+    width: 120px;
+}
+
+/* Footer */
+footer {
+    background-color: #e6d9ff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.socialmedia img {
+    width: 25px;
+    margin: 0 0.3rem;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Stack items vertically */
+.message-purpose {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+/* Make them look like bullets */
+.message-purpose label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
