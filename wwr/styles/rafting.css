@@ -1,34 +1,21 @@
+/* =========================
+   CSS VARIABLES
+========================= */
 :root {
     --primary-color: #055a05;
     --accent1-color: rgb(81, 100, 243);
-    --accent2-color: black;
-    --heading-font: "Times New Roman", "Georgia", serif;
+    --accent2-color: #000;
+    --heading-font: "Times New Roman", Georgia, serif;
     --body-font: Arial, sans-serif;
 }
 
-header {
-    background-color: white;
-    color: var(--accent2-color);
-
-}
-
+/* =========================
+   RESET & BASE STYLES
+========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: var(--body-font);
-    color: black;
-    margin: 0;
-}
-
-header,
-main,
-footer {
-    width: 100%;
-    margin: 0 auto;
 }
 
 html,
@@ -36,134 +23,68 @@ body {
     overflow-x: hidden;
 }
 
+body {
+    font-family: var(--body-font);
+    color: var(--accent2-color);
+}
+
+/* =========================
+   LAYOUT CONTAINERS
+========================= */
+header,
+main,
+footer {
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
 h1,
 h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
 
-nav a {
-    text-decoration: none;
-    color: black;
+section h2 {
+    text-align: center;
+    background-color: var(--accent1-color);
+    color: #fff;
+    padding: 0.3rem;
 }
 
-nav ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-content: center;
-    padding: 1rem;
-    color: white;
-}
-
-nav,
 p,
-section {
+section,
+nav {
     margin: 10px;
     padding: 8px;
 }
 
-section h2 {
-    text-align: center;
-    background-color: var(--accent1-color);
-    color: white;
-    padding: 5px;
-}
-
-.socialmedia a {
+/* =========================
+   NAVIGATION
+========================= */
+nav a {
     text-decoration: none;
+    color: var(--accent2-color);
 }
 
-.hero {
-    position: relative;
+nav ul {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 1rem;
 }
 
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
+/* =========================
+   HEADER
+========================= */
+header {
+    background-color: #fff;
 }
 
-h1 {
-    position: absolute;
-    top: 120px;
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    opacity: 0.75;
-    background-color: var(--accent1-color);
-    color: white;
-}
-
-.adventure-grid {
-    max-width: 840px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-}
-
-.hero article {
-    opacity: 0.9;
-    color: black;
-    position: absolute;
-    top: 24rem;
-    padding-top: 5px;
-    background-color: white;
-}
-
-.hero article img {
-    float: right;
-    width: 125px;
-}
-
-footer nav {
-    text-align: right;
-    padding: 0;
-    margin: 0;
-}
-
-footer p {
-    text-align: center;
-}
-
-footer nav img {
-    width: 30px;
-    height: auto;
-}
-
-header img {
-    width: 100px;
-    height: auto;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.history-grid img {
-    width: 300px;
-    height: auto;
-}
-
-.history-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 2fr;
-    margin: 1rem;
-}
-
-.adventure-grid {
-    max-width: 840px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-}
-
-.adventure-grid img {
-    width: 140px;
-    height: auto;
-    margin: 0.5rem;
-
-}
-
-/* Header */
 .site-header {
     display: flex;
     justify-content: space-between;
@@ -172,23 +93,94 @@ header img {
     padding: 1rem;
 }
 
+header img,
 .site-header img {
     width: 90px;
+    height: auto;
 }
 
-nav ul {
-    display: flex;
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 120px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--accent1-color);
+    color: #fff;
+    opacity: 0.75;
+}
+
+.hero article {
+    position: absolute;
+    top: 24rem;
+    background-color: #fff;
+    opacity: 0.9;
+    padding-top: 5px;
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
+}
+
+/* =========================
+   GRIDS
+========================= */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.history-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    margin: 1rem;
+}
+
+.history-grid img {
+    width: 300px;
+    height: auto;
+}
+
+.adventure-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 840px;
+}
+
+.adventure-grid img {
+    width: 140px;
+    margin: 0.5rem;
+}
+
+.employee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    list-style: none;
 }
 
-/* Company Info */
+/* =========================
+   CONTACT PAGE
+========================= */
 .company-info {
     text-align: center;
     margin: 2rem 0;
 }
 
-/* Contact Grid */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -200,7 +192,6 @@ nav ul {
     width: 100%;
 }
 
-/* Form */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -212,48 +203,11 @@ nav ul {
     padding: 0.5rem;
 }
 
+/* =========================
+   FIELDSET / RADIO GROUP
+========================= */
 fieldset {
     border: none;
-}
-
-button {
-    padding: 0.7rem;
-    background-color: #ccc;
-    border: 1px solid #333;
-    cursor: pointer;
-}
-
-/* Employees */
-.employees {
-    text-align: center;
-}
-
-.employee-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    justify-content: space-around;
-}
-
-.employee-grid img {
-    width: 120px;
-}
-
-/* Footer */
-footer {
-    background-color: #e6d9ff;
-    padding: 1rem;
-    text-align: center;
-}
-
-.socialmedia img {
-    width: 25px;
-    margin: 0 0.3rem;
-}
-
-fieldset {
-    border: none;
-    padding: 0;
     margin: 1rem 0;
 }
 
@@ -262,16 +216,59 @@ legend {
     margin-bottom: 0.5rem;
 }
 
-/* Stack items vertically */
 .message-purpose {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
 }
 
-/* Make them look like bullets */
 .message-purpose label {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+    padding: 0.7rem;
+    background-color: #ccc;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background-color: #e6d9ff;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer nav {
+    text-align: right;
+}
+
+footer nav img,
+.socialmedia img {
+    width: 25px;
+    margin: 0 0.3rem;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+.employee-grid img {
+    width: 120px;
+}
+
+figcaption {
+    margin-left: 20px;
 }
